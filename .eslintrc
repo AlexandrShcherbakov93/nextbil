@@ -1,0 +1,73 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prefer-arrow",
+    "import",
+    "typescript",
+    "react-hooks",
+    "prettier"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "react": {
+      "version": "detect",
+      "import/resolver": { "typescript": {} }
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jquery": true,
+    "es6": true
+  },
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/ban-types": "warn",
+    "@typescript-eslint/no-inferrable-types": "warn",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-namespace": "off",
+    "react-hooks/rules-of-hooks": "warn", 
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "warn",
+    "react/display-name": "off",
+    "react/no-deprecated": "warn",
+    "lines-between-class-members": ["error", "always"],
+    "no-case-declarations": "off",
+    "no-prototype-builtins": "warn",
+    "no-fallthrough": "off",
+    "no-useless-escape": "off",
+    "prefer-const": "warn",
+    "no-self-assign": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignorePattern": "\\sfrom\\s.+;$",
+        "ignoreUrls": true,
+        "ignoreComments": true
+      }
+    ],
+    "prefer-arrow/prefer-arrow-functions": [
+      "off",
+      {
+        "disallowPrototype": true,
+        "singleReturnOnly": false,
+        "classPropertiesAllowed": false
+      }
+    ]
+  }
+}

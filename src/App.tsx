@@ -1,7 +1,14 @@
-import React from "react";
+import React from 'react';
+import GlobalStyles from './shared/global-styles';
+import { LoginPage } from './pages/login-page';
 
 function App() {
-  return <div>Good luck!</div>;
+  return (
+    <>
+      <GlobalStyles />
+      <LoginPage />
+    </>
+  );
 }
 
 export default App;
